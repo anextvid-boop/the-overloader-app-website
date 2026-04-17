@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-void);
+  background-color: var(--accent-orange);
 }
 
 .vanguard-content {
@@ -18,12 +18,12 @@
 
 .vanguard-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  color: var(--accent-yellow);
+  color: var(--bg-pitch);
 }
 
 .vanguard-description {
   font-size: clamp(1.1rem, 2vw, 1.25rem);
-  color: var(--text-muted);
+  color: rgba(0, 0, 0, 0.7);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -38,10 +38,10 @@
 
 .vanguard-input {
   flex: 1;
-  background: transparent;
-  border: 1px solid #333;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem 1.5rem;
-  color: #fff;
+  color: var(--bg-pitch);
   font-family: var(--font-body);
   font-size: 1.1rem;
   border-radius: 9999px;
@@ -50,7 +50,11 @@
 }
 
 .vanguard-input:focus {
-  border-color: var(--accent-yellow);
+  border-color: var(--bg-pitch);
+}
+
+.vanguard-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .vanguard-button {

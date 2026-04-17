@@ -18,7 +18,7 @@ export const MailingList: FC = () => {
             required
             className="vanguard-input"
           />
-          <ButtonOverload type="submit" className="vanguard-button">
+          <ButtonOverload type="submit" className="vanguard-button" style={{ background: 'var(--bg-pitch)', color: '#fff', boxShadow: 'none' }}>
             GET ACCESS
           </ButtonOverload>
         </form>

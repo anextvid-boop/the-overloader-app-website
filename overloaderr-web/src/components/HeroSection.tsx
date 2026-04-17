@@ -4,6 +4,8 @@ import { DeviceFrame } from './DeviceFrame';
 import './HeroSection.css';
 
 export const HeroSection: FC = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <section className="hero-container">
       <div className="hero-content">
@@ -26,7 +28,7 @@ export const HeroSection: FC = () => {
         <div className="hero-mockup-area slam-reveal delay-3">
           {/* We use an advertising composition image that already includes the heavy iphone wrapper */}
           <DeviceFrame 
-            src="/assets/iphone-ad-1.png" 
+            src={`${baseUrl}assets/iphone-ad-1.png`} 
             alt="The Overloaderr App Dashboard" 
             className="hero-main-device"
           />

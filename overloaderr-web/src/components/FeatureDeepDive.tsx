@@ -4,6 +4,7 @@ import './FeatureDeepDive.css';
 
 export const FeatureDeepDive: FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const baseUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,7 +31,7 @@ export const FeatureDeepDive: FC = () => {
       <div className="feature-row z-pattern">
         <div className="feature-visual">
           <DeviceFrame 
-            src="/assets/iphone-screen-1.png" 
+            src={`${baseUrl}assets/iphone-screen-1.png`} 
             alt="Frictionless Onboarding" 
             className="feature-device"
           />
@@ -53,7 +54,7 @@ export const FeatureDeepDive: FC = () => {
         </div>
         <div className="feature-visual">
           <DeviceFrame 
-            src="/assets/iphone-screen-2.png" 
+            src={`${baseUrl}assets/iphone-screen-2.png`} 
             alt="The Engineering Bay" 
             className="feature-device"
             delay="1s"
@@ -65,7 +66,7 @@ export const FeatureDeepDive: FC = () => {
       <div className="feature-row z-pattern">
         <div className="feature-visual">
           <DeviceFrame 
-            src="/assets/iphone-screen-3.png" 
+            src={`${baseUrl}assets/iphone-screen-3.png`} 
             alt="Mid-Sprint Tracking" 
             className="feature-device"
             delay="2s"

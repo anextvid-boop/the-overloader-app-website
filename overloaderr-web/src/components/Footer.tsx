@@ -3,6 +3,7 @@ import './Footer.css';
 
 export const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <footer className="footer-container">
@@ -11,9 +12,9 @@ export const Footer: FC = () => {
           <p>© {currentYear} THE OVERLOADERR. REJECT WEAKNESS.</p>
         </div>
         <div className="footer-right">
-          <a href="/privacy.html">PRIVACY</a>
-          <a href="/terms.html">TERMS</a>
-          <a href="/support.html">SUPPORT</a>
+          <a href={`${baseUrl}privacy.html`}>PRIVACY</a>
+          <a href={`${baseUrl}terms.html`}>TERMS</a>
+          <a href={`${baseUrl}support.html`}>SUPPORT</a>
         </div>
       </div>
     </footer>
