@@ -1,0 +1,37 @@
+:root {
+  --bg-void: #050505;
+  --bg-pitch: #000000;
+  --text-harsh: #FFFFFF;
+  --text-muted: #888888;
+  --accent-orange: #FF5E00;
+  --accent-yellow: #FFD500;
+  --gradient-overload: linear-gradient(135deg, #FFD500 0%, #FF5E00 100%);
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-void);
+  color: var(--text-harsh);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
