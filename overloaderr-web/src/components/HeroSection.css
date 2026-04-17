@@ -10,36 +10,38 @@
 }
 
 .hero-content {
-  max-width: 1200px;
+  max-width: 1600px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 6rem;
   z-index: 10;
+  padding: 0 4rem;
 }
 
 .hero-text-area {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .hero-headline {
   font-family: var(--font-header);
-  font-size: clamp(4rem, 12vw, 10rem); 
+  font-size: clamp(4rem, 12vw, 12rem); 
   color: var(--accent-orange);
-  line-height: 0.85;
-  letter-spacing: -4px;
+  line-height: 0.8;
+  letter-spacing: -6px;
+  text-transform: uppercase;
 }
 
 .hero-subtext {
-  font-size: clamp(1.4rem, 4vw, 2.22rem);
-  font-weight: 700;
+  font-size: clamp(1.4rem, 3.5vw, 2.8rem);
+  font-weight: 800;
   color: var(--text-harsh);
-  line-height: 1.1;
-  max-width: 800px;
+  line-height: 1.05;
+  max-width: 900px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -47,60 +49,79 @@
 .hero-cta-group {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .hero-trust-signal {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .stars {
   color: var(--accent-orange);
-  font-size: 1.5rem;
-  letter-spacing: 4px;
+  font-size: 1.8rem;
+  letter-spacing: 6px;
 }
 
 .trust-text {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .hero-mockup-area {
-  flex: 1;
+  flex: 1.4; /* Give more weight to the product image on desktop */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
 }
 
 .hero-main-device {
   width: 100%;
-  max-width: 500px;
-  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+  max-width: 900px; /* Scaled up from 500px */
+  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.9));
+  transform-origin: right center;
 }
 
 /* Animations */
-@keyframes slamReveal {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-    filter: blur(10px);
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    filter: blur(0);
-  }
+/* Brutalist Flash & Slide Animations */
+@keyframes brutalistFlash {
+  0% { transform: translateX(-50px); opacity: 0; filter: blur(20px); }
+  20% { opacity: 0.8; filter: blur(0); }
+  30% { opacity: 0.3; color: #fff; }
+  40% { opacity: 0.9; }
+  50% { opacity: 0.4; color: var(--accent-orange); }
+  100% { transform: translateX(0); opacity: 1; filter: blur(0); }
+}
+
+@keyframes subtextSlide {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes imageSlam {
+  0% { transform: translateX(100px) scale(0.95); opacity: 0; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
 }
 
 .slam-reveal {
-  animation: slamReveal 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  opacity: 0; 
+  animation: brutalistFlash 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  opacity: 0;
+}
+
+.hero-subtext.slam-reveal {
+  animation: subtextSlide 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-main-device {
+  animation: imageSlam 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
 }
 
 .delay-1 { animation-delay: 0.1s; }

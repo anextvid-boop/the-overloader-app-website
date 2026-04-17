@@ -28,31 +28,31 @@
 
 .feature-text {
   flex: 1;
-  padding: 4rem;
+  padding: 6rem; /* Increased from 4rem */
 }
 
 .feature-title {
   font-family: var(--font-header);
-  font-size: clamp(3rem, 10vw, 8rem);
+  font-size: clamp(3rem, 10vw, 10rem); /* Upped from 8rem */
   color: var(--text-harsh);
-  line-height: 0.9;
-  letter-spacing: -3px;
-  margin-bottom: 2rem;
+  line-height: 0.85;
+  letter-spacing: -4px;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
 }
 
 .feature-description {
-  font-size: clamp(1.2rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-size: clamp(1.2rem, 3.5vw, 2.8rem); /* Match hero subtext weight */
+  font-weight: 800;
   color: var(--text-muted);
-  line-height: 1.1;
-  max-width: 600px;
+  line-height: 1.05;
+  max-width: 800px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .feature-visual {
-  flex: 1;
+  flex: 1.3; /* More weight to images */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +72,7 @@
 
 .monolith-img {
   width: 100%;
-  max-width: 450px;
+  max-width: 800px; /* Scaled up from 450px */
   height: auto;
   display: block;
 }
