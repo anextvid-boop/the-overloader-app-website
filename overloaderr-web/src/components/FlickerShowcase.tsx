@@ -34,16 +34,19 @@ export const FlickerShowcase: FC = () => {
   }, []);
 
   return (
-    <div className="device-frame">
+    <div className="flicker-monolith">
       <img 
         src={`${baseUrl}assets/${screens[index]}`} 
         alt={`Screen ${index + 1}`} 
-        className="device-screen-img"
-        key={index} // Force re-render for crisp flickering feel
+        className="monolith-img"
+        key={index} 
       />
-      <div className="active-overlay">
-        <span className="pulse-dot"></span>
-        <span className="overlay-text">ACTIVE OPS</span>
+      <div className="tactical-overlay">
+        <div className="scanline"></div>
+        <div className="sensor-data">
+          <span className="pulse-dot"></span>
+          <span className="overlay-text">ACTIVE_ENGINE_V1.0</span>
+        </div>
       </div>
     </div>
   );

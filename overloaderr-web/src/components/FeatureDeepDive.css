@@ -1,26 +1,25 @@
 .features-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8rem 2rem;
+  padding: 10rem 0; /* Remove horizontal padding for bleed */
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 15rem;
 }
 
 .feature-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 0;
   opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  width: 100%;
 }
 
 .feature-row.is-visible {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
 
 .feature-row.reverse {
@@ -29,19 +28,27 @@
 
 .feature-text {
   flex: 1;
+  padding: 4rem;
 }
 
 .feature-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: var(--font-header);
+  font-size: clamp(3rem, 10vw, 8rem);
   color: var(--text-harsh);
-  margin-bottom: 1.5rem;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .feature-description {
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  font-weight: 700;
   color: var(--text-muted);
-  line-height: 1.5;
-  max-width: 500px;
+  line-height: 1.1;
+  max-width: 600px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .feature-visual {
@@ -49,27 +56,94 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
-.feature-device {
-  max-width: 300px;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+/* Flicker Monolith Styles */
+.flicker-monolith {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.monolith-img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+}
+
+.tactical-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.scanline {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(255, 255, 255, 0.02) 50%
+  );
+  background-size: 100% 4px;
+}
+
+.sensor-data {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--bg-pitch);
+  padding: 0.5rem 1rem;
+  border-left: 2px solid var(--accent-orange);
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent-orange);
+  border-radius: 50%;
+  animation: pulse-red 1s infinite alternate;
+}
+
+.overlay-text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse-red {
+  from { opacity: 0.2; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.1); }
 }
 
 @media (max-width: 900px) {
   .features-container {
-    gap: 6rem;
-    padding: 4rem 2rem;
+    gap: 8rem;
+    padding: 6rem 0;
   }
   
   .feature-row, .feature-row.reverse {
-    flex-direction: column;
+    flex-direction: column !important;
     text-align: center;
-    gap: 3rem;
   }
   
-  .feature-description {
-    margin-left: auto;
-    margin-right: auto;
+  .feature-text {
+    padding: 2rem;
+  }
+  
+  .monolith-img {
+    max-width: 100%; /* Truly edge to edge on mobile */
   }
 }
