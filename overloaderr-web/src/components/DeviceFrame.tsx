@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC } from 'react';
 import './DeviceFrame.css';
 
 interface DeviceFrameProps {
@@ -8,7 +8,7 @@ interface DeviceFrameProps {
   delay?: string;
 }
 
-export const DeviceFrame: React.FC<DeviceFrameProps> = ({ 
+export const DeviceFrame: FC<DeviceFrameProps> = ({ 
   src, 
   alt, 
   className = '',

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { type FC, useState } from 'react';
 import { ButtonOverload } from './ButtonOverload';
 import './PaywallSection.css';
 
-export const PaywallSection: React.FC = () => {
+export const PaywallSection: FC = () => {
   const [isYearly, setIsYearly] = useState(true);
 
   return (

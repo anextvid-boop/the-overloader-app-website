@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import { type FC, useEffect, useRef } from 'react';
 import { DeviceFrame } from './DeviceFrame';
 import './FeatureDeepDive.css';
 
-export const FeatureDeepDive: React.FC = () => {
+export const FeatureDeepDive: FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {

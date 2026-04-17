@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC } from 'react';
 import './AppStoreBadge.css';
 
 interface AppStoreBadgeProps {
@@ -6,7 +6,7 @@ interface AppStoreBadgeProps {
   className?: string;
 }
 
-export const AppStoreBadge: React.FC<AppStoreBadgeProps> = ({ 
+export const AppStoreBadge: FC<AppStoreBadgeProps> = ({ 
   url = '#', 
   className = '' 
 }) => {

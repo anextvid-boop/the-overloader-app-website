@@ -1,9 +1,9 @@
-import React from 'react';
+import { type FC } from 'react';
 import { AppStoreBadge } from './AppStoreBadge';
 import { DeviceFrame } from './DeviceFrame';
 import './HeroSection.css';
 
-export const HeroSection: React.FC = () => {
+export const HeroSection: FC = () => {
   return (
     <section className="hero-container">
       <div className="hero-content">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { HeroSection } from './components/HeroSection';
 import { PhilosophySection } from './components/PhilosophySection';
 import { FeatureDeepDive } from './components/FeatureDeepDive';

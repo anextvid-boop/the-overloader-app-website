@@ -1,12 +1,12 @@
-import React from 'react';
+import { type FC, type ButtonHTMLAttributes, type ReactNode } from 'react';
 import './ButtonOverload.css';
 
-interface ButtonOverloadProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+interface ButtonOverloadProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
   variant?: 'primary' | 'ghost';
 }
 
-export const ButtonOverload: React.FC<ButtonOverloadProps> = ({ 
+export const ButtonOverload: FC<ButtonOverloadProps> = ({ 
   children, 
   variant = 'primary', 
   className = '', 
