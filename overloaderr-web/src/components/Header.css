@@ -1,11 +1,7 @@
 .header-container {
-  position: sticky;
-  top: 0;
   width: 100%;
-  z-index: 1000;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   background: var(--bg-void);
-  border-bottom: 2px solid var(--accent-orange);
 }
 
 .header-content.centered-stack {
@@ -26,7 +22,7 @@
 }
 
 .header-logo {
-  height: clamp(60px, 15vw, 100px);
+  height: clamp(80px, 20vw, 140px);
   width: auto;
   filter: drop-shadow(0 0 20px rgba(255, 94, 0, 0.3));
 }
