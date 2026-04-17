@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;600;900&display=swap');
+
 :root {
   --bg-void: #050505;
   --bg-pitch: #000000;
@@ -22,6 +24,7 @@ body {
   color: var(--text-harsh);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Base typography */

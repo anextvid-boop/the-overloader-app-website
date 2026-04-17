@@ -1,10 +1,21 @@
 import React from 'react';
+import { HeroSection } from './components/HeroSection';
+import { PhilosophySection } from './components/PhilosophySection';
+import { FeatureDeepDive } from './components/FeatureDeepDive';
+import { PaywallSection } from './components/PaywallSection';
+import { MailingList } from './components/MailingList';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div>
-      <h1>THE OVERLOADERR APP</h1>
-    </div>
+    <main>
+      <HeroSection />
+      <PhilosophySection />
+      <FeatureDeepDive />
+      <PaywallSection />
+      <MailingList />
+      <Footer />
+    </main>
   );
 }
 

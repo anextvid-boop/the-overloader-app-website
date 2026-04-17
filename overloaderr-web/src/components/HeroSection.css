@@ -1,0 +1,119 @@
+.hero-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  z-index: 10;
+}
+
+.hero-text-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-headline {
+  font-size: clamp(3rem, 8vw + 1rem, 8rem); /* Massive Fluid Clamp */
+  color: var(--accent-yellow);
+}
+
+.hero-subtext {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: var(--text-harsh);
+  line-height: 1.4;
+  max-width: 600px;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero-trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: var(--accent-yellow);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.trust-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-mockup-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-device {
+  max-width: 350px;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+}
+
+/* Animations */
+@keyframes slamReveal {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slam-reveal {
+  animation: slamReveal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0; /* Starting state before animation applies forwards */
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+
+/* Responsive Mobile Layout */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+  
+  .hero-text-area {
+    align-items: center;
+  }
+  
+  .hero-headline {
+    text-align: center;
+  }
+  
+  .hero-cta-group {
+    align-items: center;
+  }
+}

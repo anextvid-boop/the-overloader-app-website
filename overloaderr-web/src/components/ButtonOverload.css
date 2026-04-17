@@ -1,0 +1,38 @@
+.btn-overload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: var(--gradient-overload);
+  color: var(--bg-pitch);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  box-shadow: 0px 10px 30px rgba(255, 94, 0, 0.4);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  cursor: pointer;
+}
+
+.btn-overload:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 40px rgba(255, 94, 0, 0.7);
+}
+
+.btn-overload:active {
+  transform: scale(0.98);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 2px solid var(--accent-orange);
+  color: var(--text-harsh);
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 94, 0, 0.1);
+  box-shadow: 0px 10px 30px rgba(255, 94, 0, 0.3);
+}

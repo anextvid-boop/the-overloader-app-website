@@ -1,0 +1,68 @@
+.vanguard-container {
+  width: 100%;
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-void);
+}
+
+.vanguard-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.vanguard-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--accent-yellow);
+}
+
+.vanguard-description {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vanguard-form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.vanguard-input {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #333;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  border-radius: 9999px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.vanguard-input:focus {
+  border-color: var(--accent-yellow);
+}
+
+.vanguard-button {
+  min-width: 180px;
+}
+
+@media (max-width: 700px) {
+  .vanguard-form {
+    flex-direction: column;
+  }
+  
+  .vanguard-button {
+    width: 100%;
+  }
+}

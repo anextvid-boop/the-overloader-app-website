@@ -1,0 +1,22 @@
+.device-frame {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.device-screen-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2rem; /* Adjusted for typical iPhone internal frame curves */
+  display: block;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.mockup-float {
+  animation: float 6s ease-in-out infinite;
+}
