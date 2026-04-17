@@ -1,5 +1,6 @@
 import { type FC, useEffect, useRef } from 'react';
 import { DeviceFrame } from './DeviceFrame';
+import { FlickerShowcase } from './FlickerShowcase';
 import './FeatureDeepDive.css';
 
 export const FeatureDeepDive: FC = () => {
@@ -30,11 +31,7 @@ export const FeatureDeepDive: FC = () => {
       {/* Row 1: Image Left / Text Right */}
       <div className="feature-row z-pattern">
         <div className="feature-visual">
-          <DeviceFrame 
-            src={`${baseUrl}assets/iphone-screen-1.png`} 
-            alt="Frictionless Onboarding" 
-            className="feature-device"
-          />
+          <FlickerShowcase />
         </div>
         <div className="feature-text">
           <h3 className="feature-title">Frictionless<br/>Onboarding</h3>

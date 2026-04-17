@@ -6,9 +6,9 @@ export const MailingList: FC = () => {
   return (
     <section className="vanguard-container">
       <div className="vanguard-content">
-        <h2 className="vanguard-title">JOIN THE VANGUARD</h2>
+        <h2 className="vanguard-title">JOIN THE OVERLOADERR APP COMMUNITY</h2>
         <p className="vanguard-description">
-          Not ready to commit? Get free monthly heavy-lifting protocols and early access updates.
+          Be the first to know when we ship new protocols. No spam. Just high-precision updates.
         </p>
         <form className="vanguard-form" action="https://formspree.io/f/your-id" method="POST">
           <input

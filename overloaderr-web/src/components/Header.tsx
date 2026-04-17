@@ -6,14 +6,14 @@ export const Header: FC = () => {
 
   return (
     <header className="header-container">
-      <div className="header-content">
-        <a href={baseUrl} className="logo-link">
-          <img src={`${baseUrl}assets/theoverloaderr_logo_1.png`} alt="The Overloaderr Logo" className="header-logo" />
+      <div className="header-content centered-stack">
+        <a href={baseUrl} className="branding-group">
+          <img src={`${baseUrl}assets/theoverloaderr_logo_1.png`} alt="Logo" className="header-logo" />
+          <div className="title-stack">
+            <h1 className="header-title">THE OVERLOADERR APP</h1>
+            <span className="header-subtitle">SHATTER PLATEAUS</span>
+          </div>
         </a>
-        <nav className="header-nav">
-          <a href="#features" className="nav-item">FEATURES</a>
-          <a href="#vanguard" className="nav-item">VANGUARD</a>
-        </nav>
       </div>
     </header>
   );
