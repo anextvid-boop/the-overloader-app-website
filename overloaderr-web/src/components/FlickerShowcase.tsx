@@ -26,12 +26,18 @@ export const FlickerShowcase: FC = () => {
   const baseUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
+    // Pre-load images to ensure they are ready for the high-speed flicker
+    screens.forEach((screen) => {
+      const img = new Image();
+      img.src = `${baseUrl}assets/${screen}`;
+    });
+
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % screens.length);
-    }, 1000); // 1-second pulse as requested
+    }, 1000); 
 
     return () => clearInterval(timer);
-  }, []);
+  }, [baseUrl]);
 
   return (
     <div className="flicker-monolith">

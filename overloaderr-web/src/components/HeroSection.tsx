@@ -10,7 +10,7 @@ export const HeroSection: FC = () => {
     <section className="hero-container">
       <div className="hero-content">
         <div className="hero-text-area">
-          <h1 className="hero-headline slam-reveal">MECHANICAL<br/>DISCIPLINE.</h1>
+          <h1 className="hero-headline slam-reveal">DISCIPLINE.</h1>
           <p className="hero-subtext slam-reveal">
             Build custom workouts, track progress, and shatter plateaus. 
             The ultimate iOS workout tracker for disciplined athletes.

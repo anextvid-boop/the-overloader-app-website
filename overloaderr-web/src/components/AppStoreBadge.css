@@ -5,11 +5,10 @@
 
 .app-store-badge svg {
   height: 48px;
-  width: auto;
-  border-radius: 8px;
-  border: 1px solid #A6A6A6;
-  background-color: transparent;
-  padding: 4px 6px;
+  width: 48px; /* Fixed square for icon only */
+  border-radius: 12px;
+  background-color: #000;
+  transition: background-color 0.2s ease;
 }
 
 .app-store-badge:hover {
