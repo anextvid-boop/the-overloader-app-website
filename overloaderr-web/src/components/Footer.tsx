@@ -14,6 +14,7 @@ export const Footer: FC = () => {
         <div className="footer-right">
           <a href={`${baseUrl}privacy.html`}>PRIVACY</a>
           <a href={`${baseUrl}terms.html`}>TERMS</a>
+          <a href={`${baseUrl}privacy.html#eula`}>EULA</a>
           <a href={`${baseUrl}support.html`}>SUPPORT</a>
         </div>
       </div>
