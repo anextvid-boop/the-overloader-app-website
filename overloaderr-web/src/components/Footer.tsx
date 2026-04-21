@@ -9,12 +9,12 @@ export const Footer: FC = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-left">
-          <p>© {currentYear} THE OVERLOADERR. REJECT WEAKNESS.</p>
+          <p>© {currentYear} THE OVERLOADERR. REJECT WEAKNESS. 🏋️‍♂️</p>
         </div>
         <div className="footer-right">
           <a href={`${baseUrl}privacy.html`}>PRIVACY</a>
           <a href={`${baseUrl}terms.html`}>TERMS</a>
-          <a href={`${baseUrl}privacy.html#eula`}>EULA</a>
+          <a href={`${baseUrl}eula.html`}>EULA</a>
           <a href={`${baseUrl}support.html`}>SUPPORT</a>
         </div>
       </div>
